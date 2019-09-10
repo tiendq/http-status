@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Returning HTTP status in a quick and easy way",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tiendq/http-status.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +14,6 @@
     "http",
     "status"
   ],
-  "author": "Tien Do",
+  "author": "Tien Do <tiendq@gmail.com>",
   "license": "MIT"
 }
