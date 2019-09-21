@@ -86,6 +86,6 @@ const HttpStatusText = {
   NetworkAuthenticationRequired: http.STATUS_CODES[HttpStatus.NetworkAuthenticationRequired]
 };
 
-HttpStatus.Text = HttpStatusText;
+HttpStatus.Text = Object.freeze(HttpStatusText);
 
-module.exports = HttpStatus;
+module.exports = Object.freeze(HttpStatus);
