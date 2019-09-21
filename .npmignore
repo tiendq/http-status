@@ -1,2 +1,5 @@
 LICENSE
 README.md
+
+index.test.js
+jest.config.js

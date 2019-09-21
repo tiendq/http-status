@@ -1,6 +1,6 @@
 {
   "name": "@tiendq/http-status",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Returning HTTP status in a quick and easy way",
   "main": "index.js",
   "repository": {
@@ -8,12 +8,16 @@
     "url": "git@github.com:tiendq/http-status.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "http",
     "status"
   ],
   "author": "Tien Do <tiendq@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
