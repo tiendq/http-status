@@ -45,46 +45,10 @@ const HttpStatus = {
 };
 
 // Ref: https://nodejs.org/dist/latest-v12.x/docs/api/http.html#http_http_status_codes
-const HttpStatusText = {
-  OK: http.STATUS_CODES[HttpStatus.OK],
-  Created: http.STATUS_CODES[HttpStatus.Created],
-  Accepted: http.STATUS_CODES[HttpStatus.Accepted],
-  NonAuthoritativeInformation: http.STATUS_CODES[HttpStatus.NonAuthoritativeInformation],
-  NoContent: http.STATUS_CODES[HttpStatus.NoContent],
-  ResetContent: http.STATUS_CODES[HttpStatus.ResetContent],
-  PartialContent: http.STATUS_CODES[HttpStatus.PartialContent],
-  MovedPermanently: http.STATUS_CODES[HttpStatus.MovedPermanently],
-  Found: http.STATUS_CODES[HttpStatus.Found],
-  SeeOther: http.STATUS_CODES[HttpStatus.SeeOther],
-  NotModified: http.STATUS_CODES[HttpStatus.NotModified],
-  BadRequest: http.STATUS_CODES[HttpStatus.BadRequest],
-  Unauthorized: http.STATUS_CODES[HttpStatus.Unauthorized],
-  Forbidden: http.STATUS_CODES[HttpStatus.Forbidden],
-  NotFound: http.STATUS_CODES[HttpStatus.NotFound],
-  MethodNotAllowed: http.STATUS_CODES[HttpStatus.MethodNotAllowed],
-  NotAcceptable: http.STATUS_CODES[HttpStatus.NotAcceptable],
-  ProxyAuthenticationRequired: http.STATUS_CODES[HttpStatus.ProxyAuthenticationRequired],
-  RequestTimeout: http.STATUS_CODES[HttpStatus.RequestTimeout],
-  Conflict: http.STATUS_CODES[HttpStatus.Conflict],
-  Gone: http.STATUS_CODES[HttpStatus.Gone],
-  LengthRequired: http.STATUS_CODES[HttpStatus.LengthRequired],
-  PreconditionFailed: http.STATUS_CODES[HttpStatus.PreconditionFailed],
-  PayloadTooLarge: http.STATUS_CODES[HttpStatus.PayloadTooLarge],
-  URITooLong: http.STATUS_CODES[HttpStatus.URITooLong],
-  UnsupportedMediaType: http.STATUS_CODES[HttpStatus.UnsupportedMediaType],
-  RequestedRangeNotSatisfiable: http.STATUS_CODES[HttpStatus.RequestedRangeNotSatisfiable],
-  ExpectationFailed: http.STATUS_CODES[HttpStatus.ExpectationFailed],
-  UpgradeRequired: http.STATUS_CODES[HttpStatus.UpgradeRequired],
-  PreconditionRequired: http.STATUS_CODES[HttpStatus.PreconditionRequired],
-  TooManyRequests: http.STATUS_CODES[HttpStatus.TooManyRequests],
-  InternalServerError: http.STATUS_CODES[HttpStatus.InternalServerError],
-  NotImplemented: http.STATUS_CODES[HttpStatus.NotImplemented],
-  BadGateway: http.STATUS_CODES[HttpStatus.BadGateway],
-  ServiceUnavailable: http.STATUS_CODES[HttpStatus.ServiceUnavailable],
-  GatewayTimeout: http.STATUS_CODES[HttpStatus.GatewayTimeout],
-  HTTPVersionNotSupported: http.STATUS_CODES[HttpStatus.HTTPVersionNotSupported],
-  NetworkAuthenticationRequired: http.STATUS_CODES[HttpStatus.NetworkAuthenticationRequired]
-};
+const HttpStatusText = {};
+
+for (let status of Object.entries(HttpStatus))
+  HttpStatusText[status[0]] = http.STATUS_CODES[status[1]];
 
 HttpStatus.Text = Object.freeze(HttpStatusText);
 
